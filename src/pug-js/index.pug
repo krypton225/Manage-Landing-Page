@@ -24,6 +24,9 @@ html(lang="en")
 
     body
         main(class="main container" id="main")
+            div(class="main__bg")
+                +bg-tablet-pattern()
+
             nav(class="navbar")
                 div(class="navbar__logo")
                     +logo()
@@ -46,5 +49,28 @@ html(lang="en")
 
                 +space()
                 +button("get started", "#")
+
+                div(class="navbar__hamburger" id="hamburger-icon")
+                    //- +hamburger()
+                    span(class="navbar__hamburger__line")
+                    span(class="navbar__hamburger__line")
+                    span(class="navbar__hamburger__line")
+
+                //- div(class="navbar__close" id="close-icon")
+                //-     +close()
+
+            section(class="landing")
+                div(class="landing__left")
+                    p(class="landing__left__title") Bring everyone together to build better products.
+                    p(class="landing__left__desc") Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.
+
+                    +button("get started", "#")
+
+                +space()
+                div(class="landing__right")
+                    +space()
+                    img(src="./public/assets/images/illustration-intro.svg",
+                        alt="Illustration Picture with the percentage..")
+
         script(src="./public/main.bundle.js") 
         +no-script()
