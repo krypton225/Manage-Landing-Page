@@ -1,0 +1,26 @@
+include ./mixins/_index
+
+doctype html
+html(lang="en")
+    head
+        +meta-data("Khaled Mohamed")
+
+        +meta-desc("Just a description!")
+
+        +meta-words("HTML, CSS, JS, PugJS, PostCSS, Front End Challenge, Front End Mentor")
+        +meta-theme("#c5f82a")
+
+        link(rel="shortcut icon" href="./public/assets/favicons/favicon.ico" type="image/x-icon")
+        link(rel="manifest" href="./public/assets/favicons/site.webmanifest")
+
+        +space()
+
+        title Manage Landing Page
+
+        +space()
+
+        link(rel="stylesheet" href="./public/index.css")
+
+    body
+        script(src="./public/main.bundle.js") 
+        +no-script()
