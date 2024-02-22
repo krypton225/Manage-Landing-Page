@@ -23,9 +23,28 @@ html(lang="en")
         link(rel="stylesheet" href="./public/index.css")
 
     body
-        main(class="main" id="main")
+        main(class="main container" id="main")
             nav(class="navbar")
                 div(class="navbar__logo")
                     +logo()
+
+                +space()
+                ul(class="navbar__links" role="list")
+                    -
+                        const links = [
+                            { text: "pricing", url: "#" },
+                            { text: "product", url: "#" },
+                            { text: "about us", url: "#" },
+                            { text: "careers", url: "#" },
+                            { text: "community", url: "#" },
+                        ];
+
+                    each link in links
+                        li(class="navbar__links__item")
+                            +space()
+                            a(href=link.url class="navbar__links__item__link") #{link.text}
+
+                +space()
+                +button("get started", "#")
         script(src="./public/main.bundle.js") 
         +no-script()
