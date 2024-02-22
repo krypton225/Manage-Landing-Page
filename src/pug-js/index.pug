@@ -1,3 +1,4 @@
+include ./components/_index
 include ./mixins/_index
 
 doctype html
@@ -5,10 +6,10 @@ html(lang="en")
     head
         +meta-data("Khaled Mohamed")
 
-        +meta-desc("Just a description!")
+        +meta-desc("Just a description for Manage Landing Page project as landing page!")
 
         +meta-words("HTML, CSS, JS, PugJS, PostCSS, Front End Challenge, Front End Mentor")
-        +meta-theme("#c5f82a")
+        +meta-theme("#242d52")
 
         link(rel="shortcut icon" href="./public/assets/favicons/favicon.ico" type="image/x-icon")
         link(rel="manifest" href="./public/assets/favicons/site.webmanifest")
@@ -22,5 +23,9 @@ html(lang="en")
         link(rel="stylesheet" href="./public/index.css")
 
     body
+        main(class="main" id="main")
+            nav(class="navbar")
+                div(class="navbar__logo")
+                    +logo()
         script(src="./public/main.bundle.js") 
         +no-script()
