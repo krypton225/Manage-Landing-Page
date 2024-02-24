@@ -50,7 +50,7 @@ html(lang="en")
                             a(href=link.url class="navbar__links__item__link") #{link.text}
 
                 +space()
-                +button("get started", "#")
+                +button("btn", "get started", "#")
 
                 div(class="navbar__hamburger" id="hamburger-icon")
                     +hamburger()
@@ -63,7 +63,7 @@ html(lang="en")
                     p(class="landing__left__title") Bring everyone together to build better products.
                     p(class="landing__left__desc") Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.
 
-                    +button("get started", "#")
+                    +button("btn", "get started", "#")
 
                 +space()
                 div(class="landing__right")
@@ -136,15 +136,24 @@ html(lang="en")
                             div(class="testimonials__content__card__img")
                                 +space()
                                 img(src=item.imageURL, alt=item.personName + "'s image" draggable="false")
-                            
+
                             +space()
                             span(class="testimonials__content__card__name") #{item.personName}
-                            
+
                             p(class="testimonials__content__card__sentence") #{item.sentence}
 
                 +space()
                 div(class="get-started-btn")
-                    +button("get started", "#")
+                    +button("btn", "get started", "#")
+
+            section(class="simplify")
+                div(class="simplify__content container")
+                    div(class="simplify__content__left")
+                        p(class="simplify__content__left__text") Simplify how your team works today.
+
+                    div(class="simplify__content__right")
+                        +space()
+                        +button("btn reverse", "get started", "#")
 
         script(src="./public/main.bundle.js") 
         +no-script()

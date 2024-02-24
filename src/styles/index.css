@@ -220,6 +220,15 @@ body::-webkit-scrollbar-thumb {
     opacity: 0.76;
 }
 
+.btn.reverse {
+    background-color: var(--vary-light-gray);
+    color: var(--bright-red);
+}
+
+.btn.reverse:hover {
+    color: var(--bright-red);
+}
+
 .main {
     position: relative;
 }
@@ -608,4 +617,68 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.simplify {
+    height: 16rem;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.simplify::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1439" height="360"><g fill="%23FFF0EC" fill-rule="evenodd" opacity=".071" transform="translate(-171 -373)"><rect width="310.431" height="708" x="205" y="410" rx="155.215" transform="scale(1 -1) rotate(-45 -1484.244 0)" /><rect width="310.431" height="708" x="1269" y="7" rx="155.215" transform="scale(1 -1) rotate(-45 552.684 0)" /></g></svg>') var(--bright-red);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top right;
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .simplify::before {
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="94" height="302"><rect width="310.431" height="708" x="-357" y="-17" fill="%23FFF0EC" fill-rule="evenodd" opacity=".071" rx="155.215" transform="scale(1 -1) rotate(-45 -951.398 26.5)"></rect></svg>') var(--bright-red);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: unset;
+    }
+}
+
+.simplify__content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.simplify__content__left__text {
+    width: 70%;
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .simplify__content__left__text {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .simplify__content__left__text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .simplify__content__right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
