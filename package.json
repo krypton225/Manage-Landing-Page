@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "concurrently --prefix-colors=\"magenta,cyan,yellow,blue\" \"npm run postcss:watch\" \"npm run pug-js\" \"npm run server\" \"npm run out-wpk-dev\"",
         "start": "concurrently --prefix-colors=\"magenta,cyan,yellow\" \"npm run server\" \"npm run postcss:watch\" \"npm run out-wpk-production\"",
-        "postcss:watch": "postcss src/styles/index.css --dir public --use autoprefixer --watch",
+        "postcss:watch": "postcss src/styles/index.css --dir public --use autoprefixer cssnano --watch",
         "out-wpk-dev": "webpack --mode=development --watch",
         "out-wpk-production": "webpack --mode=production",
         "server": "live-server --open=./index.html",
@@ -29,6 +29,7 @@
     "devDependencies": {
         "autoprefixer": "^10.4.17",
         "concurrently": "^8.2.2",
+        "cssnano": "^6.0.5",
         "live-server": "^1.2.2",
         "postcss": "^8.4.35",
         "postcss-cli": "^11.0.0",
