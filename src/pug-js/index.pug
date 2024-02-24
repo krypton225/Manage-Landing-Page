@@ -155,5 +155,86 @@ html(lang="en")
                         +space()
                         +button("btn reverse", "get started", "#")
 
+            footer(class="footer")
+                div(class="container")
+                    div(class="footer__content")
+                        div(class="footer__content__left")
+                            div(class="footer__content__left__logo")
+                                +logo("#ffffff")
+
+                            div(class="footer__content__left__social")
+                                a(href="https://www.facebook.com" target="_blank")
+                                    +facebook()
+
+                                a(href="https://www.youtube.com" target="_blank")
+                                    +youtube()
+
+                                a(href="https://www.twitter.com" target="_blank")
+                                    +twitter()
+
+                                a(href="https://www.pinterest.com" target="_blank")
+                                    +pinterest()
+
+                                a(href="https://www.instagram.com" target="_blank")
+                                    +instagram()
+
+                            p(class="footer__content__left__copyright") Copyright 2020. All Rights Reserved
+
+                        div(class="footer__content__center")
+                            -
+                                const footerFirstLinks = [
+                                    {
+                                        linkURL: "#",
+                                        text: "home"
+                                    },
+                                    {
+                                        linkURL: "#",
+                                        text: "pricing"
+                                    },
+                                    {
+                                        linkURL: "#",
+                                        text: "products"
+                                    },
+                                    {
+                                        linkURL: "#",
+                                        text: "about us"
+                                    }
+                                ];
+
+                                const footerSecondLinks = [
+                                    {
+                                        linkURL: "#",
+                                        text: "careers"
+                                    },
+                                    {
+                                        linkURL: "#",
+                                        text: "community"
+                                    },
+                                    {
+                                        linkURL: "#",
+                                        text: "privacy policy"
+                                    }
+                                ]
+
+                            ul(class="footer__content__center__first-list" role="list")
+                                each item in footerFirstLinks
+                                    li(class="footer__content__center__first-list__item")
+                                        +space()
+                                        a(href=item.linkURL) #{item.text}
+
+                            ul(class="footer__content__center__second-list" role="list")
+                                each item in footerSecondLinks
+                                    li(class="footer__content__center__second-list")
+                                        +space()
+                                        a(href=item.linkURL) #{item.text}
+
+                        div(class="footer__content__right")
+                            div(class="footer__content__right__header")
+                                div(class="footer__content__right__header__input")
+                                    input(type="text" name="inbox" placeholder="Updates in your inbox…")
+                                +button("btn", "go", "#")
+
+                            p(class="footer__content__right__copyright") Copyright 2020. All Rights Reserved
+
         script(src="./public/main.bundle.js") 
         +no-script()
