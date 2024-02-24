@@ -744,6 +744,13 @@ body::-webkit-scrollbar-thumb {
     gap: 0.7rem;
 }
 
+@media (max-width: 576px) {
+    .footer__content__left__social {
+        order: -1;
+        gap: 1.7rem;
+    }
+}
+
 .footer__content__left__copyright {
     color: var(--dark-grayish-blue);
     display: none;
