@@ -47,7 +47,7 @@ html(lang="en")
                     each link in links
                         li(class="navbar__links__item")
                             +space()
-                            a(href=link.url class="navbar__links__item__link") #{link.text}
+                            a(href=link.url class="navbar__links__item__link" aria-label="Go to " + link.text + " page") #{link.text}
 
                 +space()
                 +button("btn", "get started", "#")
@@ -163,19 +163,19 @@ html(lang="en")
                                 +logo("#ffffff")
 
                             div(class="footer__content__left__social")
-                                a(href="https://www.facebook.com" target="_blank")
+                                a(href="https://www.facebook.com" target="_blank" aria-label="Open facebook page now")
                                     +facebook()
 
-                                a(href="https://www.youtube.com" target="_blank")
+                                a(href="https://www.youtube.com" target="_blank" aria-label="Open youtube channel now")
                                     +youtube()
 
-                                a(href="https://www.twitter.com" target="_blank")
+                                a(href="https://www.twitter.com" target="_blank" aria-label="Open twitter account now")
                                     +twitter()
 
-                                a(href="https://www.pinterest.com" target="_blank")
+                                a(href="https://www.pinterest.com" target="_blank" aria-label="Open pinterest account now")
                                     +pinterest()
 
-                                a(href="https://www.instagram.com" target="_blank")
+                                a(href="https://www.instagram.com" target="_blank" aria-label="Open instagram account now")
                                     +instagram()
 
                             p(class="footer__content__left__copyright") Copyright 2020. All Rights Reserved
@@ -220,13 +220,13 @@ html(lang="en")
                                 each item in footerFirstLinks
                                     li(class="footer__content__center__first-list__item")
                                         +space()
-                                        a(href=item.linkURL) #{item.text}
+                                        a(href=item.linkURL aria-label="Go to " + item.text + " page") #{item.text}
 
                             ul(class="footer__content__center__second-list" role="list")
                                 each item in footerSecondLinks
                                     li(class="footer__content__center__second-list")
                                         +space()
-                                        a(href=item.linkURL) #{item.text}
+                                        a(href=item.linkURL aria-label="Go to " + item.text + " page") #{item.text}
 
                         div(class="footer__content__right")
                             div(class="footer__content__right__header")
